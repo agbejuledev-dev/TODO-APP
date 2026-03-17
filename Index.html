@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskflow – Advanced Todo App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="CSS/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:wght...">
+ 
+</head>
+<body>
+  <div class="app">
+
+  <!-- Header -->
+  <header>
+    <div>
+      <div class="logo">Task<span>flow</span></div>
+      <div class="tagline">Stay focused · Get it done</div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">☀</button>
+    </div>
+  </header>
+
+  <!-- Input -->
+  <div class="input-card">
+    <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off" />
+    <button class="add-btn" id="addTask">+ Add Task</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <span class="task-count" id="taskCount">0 tasks remaining</span>
+    <button class="clear-btn" id="clearCompleted">Clear completed</button>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar" style="width:0%"></div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">All <span class="tab-badge" id="badge-all">0</span></button>
+    <button class="filter-tab" data-filter="active">Active <span class="tab-badge" id="badge-active">0</span></button>
+    <button class="filter-tab" data-filter="completed">Done <span class="tab-badge" id="badge-completed">0</span></button>
+  </div>
+
+  <!-- Task List -->
+  <ul id="taskList"></ul>
+
+  <!-- Empty State -->
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">✦</div>
+    <h3>No tasks here</h3>
+    <p>NO ROOM FOR LAZINESS</p>
+    <p>ADD SOME TASK TO GET STARTED.</p>
+  </div>
+
+  <footer>Built with HTML · CSS · JavaScript &nbsp;·&nbsp; Taskflow</footer>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+ <script src="JS/script.js"></script>
+</body>
+</html>
